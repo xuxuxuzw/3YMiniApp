@@ -1,5 +1,18 @@
 //app.js
+
+var configs = require('config/configs.js')
+var storageConfig = require('config/storage-config.js')
+var productModel = require('models/product-model.js')
+var userModel = require('models/user-model.js')
+var WxNotificationCenter = require('plugins/WxNotificationCenter/WxNotificationCenter.js')
+
 App({
+  configs: configs,
+  storageConfig: storageConfig,
+  productModel: productModel,
+  userModel: userModel,
+  WxNotificationCenter: WxNotificationCenter,
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
