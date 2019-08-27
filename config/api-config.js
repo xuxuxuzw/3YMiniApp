@@ -37,6 +37,12 @@ var product = {
     path: '/product/:id',
     method: 'GET',
     version: ''
+  },
+  //最近新增的五个产品-轮播图
+  swiper: {
+    path: '/product/swiper',
+    method: 'GET',
+    version: ''
   }
 }
 

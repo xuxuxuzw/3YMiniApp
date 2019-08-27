@@ -1,1 +1,17 @@
-/* pages/product/product.wxss */
+	.tower-swiper .tower-item {
+		transform: scale(calc(0.5 + var(--index) / 10));
+		margin-left: calc(var(--left) * 100rpx - 150rpx);
+		z-index: var(--index);
+	}
+  
+  .swiper-item-describe{
+    line-height: 35rpx;
+    font-size: 10px;
+    border-radius: 0 0 10rpx 10rpx;
+    color:#ffffff;
+    background-color: #333333;
+    opacity: 0.5;
+    position: relative;
+    top:-35rpx;
+    left:0;
+  }
