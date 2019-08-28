@@ -1,6 +1,7 @@
 /**app.wxss**/
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";
+@import "./pages/template/bar/bar.wxss"; /*引入template样式*/
 .container {
   height: 100%;
   display: flex;

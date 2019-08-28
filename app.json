@@ -1,8 +1,11 @@
 {
   "pages": [
-    "pages/product/product",
-    "pages/login/login",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/home/home",
+    "pages/supplier/supplier",
+    "pages/store/store",
+    "pages/me/me",
+    "pages/login/login"
   ],
   "window": {
     "navigationStyle": "custom"

@@ -1,0 +1,8 @@
+/*bar*/
+.bar-bottom{
+  height:100rpx;
+  margin-top: 100rpx;
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+}

@@ -13,8 +13,13 @@ App({
   userModel: userModel,
   WxNotificationCenter: WxNotificationCenter,
 
-  onLaunch: function () {
 
+  navigateToBar:function(e){
+      console.log(e)
+  },
+
+  onLaunch: function () {
+    
     wx.getSystemInfo({
       success: e => {
         this.globalData.StatusBar = e.statusBarHeight;

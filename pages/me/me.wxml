@@ -1,0 +1,23 @@
+<!--导入bar模板-->
+<import src="../template/bar/bar.wxml" />
+
+<cu-custom bgColor="bg-gradual-pink">
+	<view slot="content">个人中心</view>
+</cu-custom>
+
+
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+
+<!--嵌入bar模板-->
+<template is="bar" data="{{activityBar}}"></template><!--传入参数，必须是对象-->

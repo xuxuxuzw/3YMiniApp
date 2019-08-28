@@ -1,0 +1,71 @@
+<template name="bar">
+<view class="bar-bottom">
+  <view class="box">
+    <view class="cu-bar tabbar bg-white">
+
+      <block>
+        <view wx:if="{{activityBar.activityBar=='0'}}" class="action">
+          <view class="cuIcon-cu-image">
+            <text class="cuIcon-home lg text-green"></text>
+          </view>
+          <view class="text-green">首页</view>
+        </view>
+        <view bindtap="navigateToBar" data-url='/pages/index/index' wx:else class="action">
+          <view class="cuIcon-cu-image">
+            <text class="cuIcon-home lg text-gray"></text>
+          </view>
+          <view class="text-gray">首页</view>
+        </view>
+      </block>
+
+      
+      <block>
+        <view wx:if="{{activityBar.activityBar=='1'}}" class="action">
+          <view class="cuIcon-cu-image">
+            <text class="cuIcon-shop lg text-green"></text>
+          </view>
+          <view class="text-green">店铺</view>
+        </view>
+        <view bindtap="navigateToBar" data-url='/pages/store/store' wx:else class="action">
+          <view class="cuIcon-cu-image">
+            <text class="cuIcon-shop lg text-gray"></text>
+          </view>
+          <view class="text-gray">店铺</view>
+        </view>
+      </block>
+
+      
+      <block>
+        <view wx:if="{{activityBar.activityBar=='2'}}" class="action">
+          <view class="cuIcon-cu-image">
+            <text class="cuIcon-friendfill lg text-green"></text>
+          </view>
+          <view class="text-green">供应商</view>
+        </view>
+        <view bindtap="navigateToBar" data-url='/pages/supplier/supplier' wx:else class="action">
+          <view class="cuIcon-cu-image">
+            <text class="cuIcon-friendfill lg text-gray"></text>
+          </view>
+          <view class="text-gray">供应商</view>
+        </view>
+      </block>
+
+      <block>
+        <view wx:if="{{activityBar.activityBar=='3'}}" class="action">
+          <view class="cuIcon-cu-image">
+            <text class="cuIcon-people lg text-green"></text>
+          </view>
+          <view class="text-green">我的</view>
+        </view>
+        <view bindtap="navigateToBar" data-url='/pages/me/me' wx:else class="action">
+          <view class="cuIcon-cu-image">
+            <text class="cuIcon-people lg text-gray"></text>
+          </view>
+          <view class="text-gray">我的</view>
+        </view>
+      </block>
+
+    </view>
+  </view>
+</view>
+</template>

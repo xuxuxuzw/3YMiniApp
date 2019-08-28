@@ -1,13 +1,31 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<home wx:if="{{PageCur=='home'}}"></home>
+<store wx:if="{{PageCur=='store'}}"></store>
+<supplier wx:if="{{PageCur=='supplier'}}"></supplier>
+<me wx:if="{{PageCur=='me'}}"></me>
+
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="home">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-home lg {{PageCur=='home'?'text-green':'text-gray'}}"></text>
+    </view>
+    <view class="{{PageCur=='home'?'text-green':'text-gray'}}">首页</view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="action" bindtap="NavChange" data-cur="store">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-shop lg {{PageCur=='store'?'text-green':'text-gray'}}"></text>
+    </view>
+    <view class="{{PageCur=='store'?'text-green':'text-gray'}}">店铺</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="supplier">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-friendfill lg {{PageCur=='supplier'?'text-green':'text-gray'}}"></text>
+    </view>
+    <view class="{{PageCur=='supplier'?'text-green':'text-gray'}}">供应商</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="me">
+    <view class='cuIcon-cu-image'>
+      <text class="cuIcon-people lg {{PageCur=='me'?'text-green':'text-gray'}}"></text>
+    </view>
+    <view class="{{PageCur=='me'?'text-green':'text-gray'}}">关于</view>
   </view>
 </view>

@@ -1,0 +1,134 @@
+<cu-custom bgColor="bg-gradual-pink">
+	<view slot="content">首页</view>
+</cu-custom>
+
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-gradual-green shadow-blur round">搜索</button>
+  </view>
+</view>
+
+<view class="box"></view>
+
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+      <view class="swiper-item-describe">{{item.sku}}-{{item.name}}</view>
+    </view>
+  </swiper-item>
+</swiper>
+
+<!-- 商城特色 -->
+<!-- <view class="feature">
+  <view>
+    <image src="/resources/icon/smallIco/fang.png" class="feature-ico" />
+    全场包邮
+  </view>
+  <view>
+    <image src="/resources/icon/smallIco/flash.png" class="feature-ico" />
+    先行赔付
+  </view>
+  <view>
+    <image src="/resources/icon/smallIco/yuan.png" class="feature-ico" />
+    7天无理由
+  </view>
+  <view>
+    <image src="/resources/icon/smallIco/ling.png" class="feature-ico" />
+    优先退款
+  </view>
+</view> -->
+
+<!-- 推荐商品列表 -->
+<scroll-view class="scroll-rec-items" scroll-x="{{true}}">
+  <image src="/resources/items/1001.png" class="items-cover" />
+  <image src="/resources/items/1002.png" class="items-cover" />
+  <image src="/resources/items/1001.png" class="items-cover" />
+  <image src="/resources/items/1002.png" class="items-cover" />
+  <image src="/resources/items/1001.png" class="items-cover" />
+  <image src="/resources/items/1002.png" class="items-cover" />
+</scroll-view>
+
+
+<view class="new-item-list">
+
+  <view class="item-outter">
+    <image src="/resources/items/1001.png" class="new-item-cover" />
+    <view class="item-border">
+      <view class="tags">衣服</view>
+      <view class="tags">裤子</view>
+      <view class="tags">奢侈品</view>
+      <view class="tags">裤子</view>
+      <view class="tags">奢侈品</view>
+    </view> 
+    <view class="price-border">
+      <view class="price">￥100.00</view>
+      <view class="like-counts">
+        888
+        <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
+      </view>
+    </view> 
+  </view>
+
+  <view class="item-outter">
+    <image src="/resources/items/1002.png" class="new-item-cover" />
+    <view class="item-border">
+      <view class="tags">衣服</view>
+      <view class="tags">裤子</view>
+      <view class="tags">奢侈品</view>
+      <view class="tags">裤子</view>
+      <view class="tags">奢侈品</view>
+    </view> 
+    <view class="price-border">
+      <view class="price">￥100.00</view>
+      <view class="like-counts">
+        888
+        <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
+      </view>
+    </view> 
+  </view>
+
+<view class="item-outter">
+    <image src="/resources/items/1003.png" class="new-item-cover" />
+    <view class="item-border">
+      <view class="tags">衣服</view>
+      <view class="tags">裤子</view>
+      <view class="tags">奢侈品</view>
+      <view class="tags">裤子</view>
+      <view class="tags">奢侈品</view>
+    </view> 
+    <view class="price-border">
+      <view class="price">￥100.00</view>
+      <view class="like-counts">
+        888
+        <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
+      </view>
+    </view> 
+  </view>
+
+  <view class="item-outter">
+    <image src="/resources/items/1004.png" class="new-item-cover" />
+    <view class="item-border">
+      <view class="tags">衣服</view>
+      <view class="tags">裤子</view>
+      <view class="tags">奢侈品</view>
+      <view class="tags">裤子</view>
+      <view class="tags">奢侈品</view>
+    </view> 
+    <view class="price-border">
+      <view class="price">￥100.00</view>
+      <view class="like-counts">
+        888
+        <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
+      </view>
+    </view> 
+  </view>
+</view>
+
+
+
