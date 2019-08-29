@@ -1,1 +1,98 @@
-/* pages/login/login.wxss */
+
+.page-logo {
+    padding-top: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-logo image {
+    width: 450rpx;
+}
+
+.form {
+    box-sizing: border-box;
+    padding: 0 60rpx;
+}
+
+.inputs-area {
+    width: 100%;
+    background-color: #F9F9F9;
+    border: 2rpx solid #d8dde0;
+    box-sizing: border-box;
+    border-radius: 10rpx;
+}
+.input-box {
+  width: 100%;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.input-box label {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.input-box label image,
+.input-box label text {
+    flex-shrink: 0;
+}
+
+.input-box label input {
+  font-size: 32rpx;
+  line-height: 44rpx;
+  color: #222222;
+  width: 100%;
+  padding-left: 20rpx;
+}
+
+.ic-phone {
+    width: 36rpx;
+    height: 38rpx; 
+}
+
+.ic-code {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.ic-wechat {
+    width: 68rpx;
+    height: 56rpx;
+}
+
+.label-border {
+    border-bottom: 2rpx solid #D8DDE0;
+}
+
+.send-btn {
+    width: 200rpx;
+    margin: 0; padding: 0; 
+    line-height: 1;
+    text-align: right;
+}
+
+.login-btn {
+  margin-top: 80rpx;
+}
+
+.login-btn button {
+  height: 88rpx;
+  background-color: #e21a47;
+  color: #fff;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+.wechat-box {
+    position: fixed;
+    bottom: 140rpx;
+    left: 0;
+    width: 100%;
+    font-size: 26rpx;
+    color: #B3B3B3;
+}
+
