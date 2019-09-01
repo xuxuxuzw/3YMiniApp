@@ -1,0 +1,9 @@
+var filter = {
+  strSlice: function (str , index , len) {
+    var value = str+'';
+    return value.slice(index, len)
+  }
+}
+module.exports = {
+  strSlice: filter.strSlice
+}

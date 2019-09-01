@@ -1,3 +1,4 @@
+<wxs module="filter" src="../../utils/page-data-handle.wxs"></wxs>
 
 <cu-custom bgColor="bg-gradual-pink">
 	<view slot="content">供应商管理</view>
@@ -16,17 +17,20 @@
 <view class="box"></view>
 
 <scroll-view scroll-y class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh - {{CustomBar}}px - 50px)" scroll-with-animation="true" enable-back-to-top="true">
-  <block wx:for="{{list}}" wx:key>
-    <view class="padding indexItem-{{list[index]}}" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view>
+  <block wx:for="{{supplierList}}" wx:for-index="index" wx:for-item="item">
+    <view class="padding indexItem-{{item.letter}}" id="indexes-{{item.letter}}" data-index="{{item.letter}}">    {{item.letter}}</view>
     <view class="cu-list menu-avatar no-padding">
-      <view class="cu-item" wx:for="{{2}}" wx:key wx:for-index="sub">
-        <view class="cu-avatar round lg">{{list[index]}}</view>
+      <view class="cu-item" wx:for="{{item.list}}" wx:for-index="subIndex" wx:for-item="subItem">
+        <view class="cu-avatar round lg">{{filter.strSlice(subItem.contact_name,0,1)}}</view>
         <view class="content">
-          <view class="text-grey">{{list[index]}}
-            <text class="text-abc">{{list[sub]}}</text>君</view>
-          <view class="text-gray text-sm">
-            有{{sub+2}}个主子需要伺候
-          </view>
+          <view class="text-grey">
+            <text class="text-abc">{{subItem.contact_name}}</text></view>
+            <view class="text-gray text-sm" bindtap="tel" data-phone="{{subItem.contact_phone}}">
+            {{subItem.contact_phone}}
+            </view>
+             <view class="text-gray text-sm">
+            {{subItem.name}}
+            </view>
         </view>
       </view>
     </view>

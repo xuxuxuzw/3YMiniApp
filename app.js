@@ -4,6 +4,7 @@ var configs = require('config/configs.js')
 var storageConfig = require('config/storage-config.js')
 var productModel = require('models/product-model.js')
 var userModel = require('models/user-model.js')
+var supplierModel = require('models/supplier-model.js')
 var WxNotificationCenter = require('plugins/WxNotificationCenter/WxNotificationCenter.js')
 
 App({
@@ -11,6 +12,7 @@ App({
   storageConfig: storageConfig,
   productModel: productModel,
   userModel: userModel,
+  supplierModel: supplierModel,
   WxNotificationCenter: WxNotificationCenter,
 
 

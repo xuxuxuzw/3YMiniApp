@@ -46,6 +46,22 @@ var product = {
   }
 }
 
+//==供应商==
+var supplier = {
+  //供应商列表
+  list: {
+    path: '/supplier',
+    method: 'GET',
+    version: ''
+  },
+  //产品详情
+  detail: {
+    path: '/supplier/:id',
+    method: 'GET',
+    version: ''
+  }
+}
+
 // ==公共==
 var common = {
     // 图片上传
@@ -66,5 +82,6 @@ module.exports = {
     errorCode: errorCode,
     user: user,
     common: common,
-    product:product
+    product:product,
+    supplier: supplier
 }
