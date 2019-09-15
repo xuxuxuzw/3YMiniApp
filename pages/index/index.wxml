@@ -1,3 +1,5 @@
+
+
 <home wx:if="{{PageCur=='home'}}"></home>
 <store wx:if="{{PageCur=='store'}}"></store>
 <supplier wx:if="{{PageCur=='supplier'}}"></supplier>

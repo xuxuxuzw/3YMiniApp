@@ -1,3 +1,5 @@
+<wxs module="filter" src="../../utils/page-data-handle.wxs"></wxs>
+
 <cu-custom bgColor="bg-gradual-pink">
 	<view slot="content">首页</view>
 </cu-custom>
@@ -24,27 +26,7 @@
   </swiper-item>
 </swiper>
 
-<!-- 商城特色 -->
-<!-- <view class="feature">
-  <view>
-    <image src="/resources/icon/smallIco/fang.png" class="feature-ico" />
-    全场包邮
-  </view>
-  <view>
-    <image src="/resources/icon/smallIco/flash.png" class="feature-ico" />
-    先行赔付
-  </view>
-  <view>
-    <image src="/resources/icon/smallIco/yuan.png" class="feature-ico" />
-    7天无理由
-  </view>
-  <view>
-    <image src="/resources/icon/smallIco/ling.png" class="feature-ico" />
-    优先退款
-  </view>
-</view> -->
-
-<!-- 推荐商品列表 -->
+<!-- 推荐商品列表 
 <scroll-view class="scroll-rec-items" scroll-x="{{true}}">
   <image src="/resources/items/1001.png" class="items-cover" />
   <image src="/resources/items/1002.png" class="items-cover" />
@@ -52,82 +34,25 @@
   <image src="/resources/items/1002.png" class="items-cover" />
   <image src="/resources/items/1001.png" class="items-cover" />
   <image src="/resources/items/1002.png" class="items-cover" />
-</scroll-view>
+</scroll-view>-->
 
 
-<view class="new-item-list">
-
-  <view class="item-outter">
-    <image src="/resources/items/1001.png" class="new-item-cover" />
-    <view class="item-border">
-      <view class="tags">衣服</view>
-      <view class="tags">裤子</view>
-      <view class="tags">奢侈品</view>
-      <view class="tags">裤子</view>
-      <view class="tags">奢侈品</view>
-    </view> 
-    <view class="price-border">
-      <view class="price">￥100.00</view>
-      <view class="like-counts">
-        888
-        <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
-      </view>
-    </view> 
-  </view>
-
-  <view class="item-outter">
-    <image src="/resources/items/1002.png" class="new-item-cover" />
-    <view class="item-border">
-      <view class="tags">衣服</view>
-      <view class="tags">裤子</view>
-      <view class="tags">奢侈品</view>
-      <view class="tags">裤子</view>
-      <view class="tags">奢侈品</view>
-    </view> 
-    <view class="price-border">
-      <view class="price">￥100.00</view>
-      <view class="like-counts">
-        888
-        <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
-      </view>
-    </view> 
-  </view>
-
-<view class="item-outter">
-    <image src="/resources/items/1003.png" class="new-item-cover" />
-    <view class="item-border">
-      <view class="tags">衣服</view>
-      <view class="tags">裤子</view>
-      <view class="tags">奢侈品</view>
-      <view class="tags">裤子</view>
-      <view class="tags">奢侈品</view>
-    </view> 
-    <view class="price-border">
-      <view class="price">￥100.00</view>
-      <view class="like-counts">
-        888
-        <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
-      </view>
-    </view> 
-  </view>
-
-  <view class="item-outter">
-    <image src="/resources/items/1004.png" class="new-item-cover" />
-    <view class="item-border">
-      <view class="tags">衣服</view>
-      <view class="tags">裤子</view>
-      <view class="tags">奢侈品</view>
-      <view class="tags">裤子</view>
-      <view class="tags">奢侈品</view>
-    </view> 
-    <view class="price-border">
-      <view class="price">￥100.00</view>
-      <view class="like-counts">
-        888
-        <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
-      </view>
-    </view> 
-  </view>
+<view class="new-item-list" >
+<block wx:for="{{productList}}" wx:key>
+    <view class="item-outter">
+      <image src="{{item.url}}" class="new-item-cover" />
+      <view class="item-border">
+        <view class="tags" wx:if="{{item.labels_name}}">{{item.labels_name}}</view>
+      </view> 
+      <view class="price-border">
+        <view class="price">￥{{filter.priceToPoints(item.sku_value)}}</view>
+        <!--<view class="like-counts">
+          888
+          <image src="/resources/icon/smallIco/likes.png" class="like-ico" />
+        </view>-->
+      </view> 
+    </view>
+  </block>
 </view>
 
 

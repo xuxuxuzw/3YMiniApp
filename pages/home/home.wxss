@@ -90,7 +90,8 @@ page {
     width: 350rpx;
     margin-bottom: 10rpx;
     padding: 6rpx 10rpx;
-    margin-left: 17rpx
+    margin-left: 17rpx;
+    border: #eeeeee 1px solid;
 }
 .new-item-cover {
     width: 350rpx;

@@ -10,6 +10,7 @@ Component({
   data: {
     cardCur: 0,
     DotStyle:1,
+    productList: [],
     swiperList: [],
     activityBar: { activityBar: '0' },
     CustomBar: app.globalData.CustomBar,
@@ -19,6 +20,27 @@ Component({
     this.towerSwiper('swiperList');
     var that = this;
     //测试获取产品列表
+    var productList = [];
+    app.productModel.list('', function (retuanData){
+      var list = retuanData.data_list;
+      console.log(list)
+      list.forEach(function (item, index) {
+        console.log(item)
+        productList.push({
+          id: item.id,
+          url: item.image,
+          sku: item.sku,
+          sku_value: item.sku_value,
+          name: item.name,
+          labels_name: item.labels_name,
+          labels_id: item.labels_id
+        })
+      });
+      that.setData({
+        productList: productList
+      })
+    });
+
     var swiperList = [];
     app.productModel.swiper('', function (retuanData) {
       var list = retuanData.data_list;
