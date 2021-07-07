@@ -1,0 +1,30 @@
+
+<view style="box-sizing: border-box;">
+    <view class='page-logo'>
+		<image src="/images/logo-login.png" mode="aspectFit" />
+    </view>
+    <view class='form'>
+        <form bindsubmit="bindSubmit">
+            <view class="inputs-area">
+                <view class="input-box label-border">
+                    <label>
+                        <text class="cuIcon-people lg text-gray"></text>
+                        <input placeholder='输入您的账号' name="name" value="{{formData.name}}" bindinput="bindInput" data-key="name" />
+                    </label>
+                </view>
+            </view>
+            <view class="inputs-area">
+                <view class="input-box label-border">
+                    <label>
+                        <text class="cuIcon-lock lg text-gray"></text>
+                        <input placeholder='输入您的密码' type="password" name="password" value="{{formData.password}}" bindinput="bindInput" data-key="password" />
+                    </label>
+                </view>
+            </view>
+
+            <view class='login-btn'>
+                <button formType="submit" loading="{{!isSaveEnable}}">登录</button>
+            </view>
+        </form>
+    </view>
+</view>

@@ -1,0 +1,14 @@
+var filter = {
+  strSlice: function (str , index , len) {
+    var value = str+'';
+    return value.slice(index, len)
+  },
+  priceToPoints:function(price){
+    console.log(price)
+    return price/100;
+  }
+}
+module.exports = {
+  strSlice: filter.strSlice,
+  priceToPoints: filter.priceToPoints
+}

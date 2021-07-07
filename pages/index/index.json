@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "home": "../home/home",
+    "store": "../store/store",
+    "supplier": "../supplier/supplier",
+    "me": "../me/me"
+  }
+}
